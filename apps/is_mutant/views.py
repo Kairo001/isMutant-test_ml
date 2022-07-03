@@ -20,20 +20,20 @@ class IsMutant(APIView):
     """Only post method allowed."""
     # dna = ["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
     response = {}
-    response['is_mutant'] = False
     if not "dna" in request.data.keys():
       response['error'] = True
-      response['message'] = "Missing DNA in the request."
+      response['message'] = "Missing dna in the request."
       return Response(response, status.HTTP_400_BAD_REQUEST)
 
     if type(request.data['dna']) != list:
       response['error'] = True
-      response['message'] = "DNA is not array"
+      response['message'] = "dna is not array."
       return Response(response, status.HTTP_400_BAD_REQUEST)
 
     [response['error'],  response['is_mutant'], response['message']] = is_mutant(request.data['dna'])
 
     if response['error']:
+      response.pop('is_mutant')
       return Response(response, status.HTTP_400_BAD_REQUEST)
     
     if not response['is_mutant']:

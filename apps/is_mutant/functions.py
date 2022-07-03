@@ -1,12 +1,14 @@
 
 def detect_errors(adn:list):
+    if len(adn) == 0:
+      return True, "Array is empty"
     for i in range(len(adn)):
         if len(adn[i]) != len(adn):
-            return True, "DNA error, it is not an NxN matrix"
+            return True, "dna error, it is not an NxN matrix."
         for j in range(len(adn[i])):
             character = adn[i][j]
             if character not in "ATCG":
-                return True, "DNA error, does not meet the letters."
+                return True, "dna error, does not meet the letters."
     
     return False, "Sin errores"
     
@@ -43,7 +45,7 @@ def is_mutant(adn:list):
             except:
                 pass
             
-            if len(pos_success) == 8:
+            if len(pos_success) > 4:
                 return False, True, "The human is mutant."
             
     return False, False, "The human is not mutant."
