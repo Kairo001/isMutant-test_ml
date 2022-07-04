@@ -17,9 +17,9 @@ Teniendo esto en cuenta esto, esta aplicación tiene los siguientes dos API Rest
 ## Configuración para despliegue local
 1. Clonar este repositorio.
 2. Crear un entorno virtual de python.
-  ```sh
-  virtualenv name_env
-  ```
+    ```sh
+    virtualenv name_env
+    ```
 3. Activar el entorno vitual.
   - Windows
     ```sh
