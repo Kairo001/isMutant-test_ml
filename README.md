@@ -21,14 +21,14 @@ Teniendo esto en cuenta esto, esta aplicación tiene los siguientes dos API Rest
     virtualenv name_env
     ```
 3. Activar el entorno vitual.
-                                                                                                  - Windows
-                                                                                                    ```sh
-                                                                                                    name_env\Scripts\activate.bat
-                                                                                                    ```
-                                                                                                  - Linux
-                                                                                                    ```sh
-                                                                                                    source name_env/bin/activate
-                                                                                                    ```
+                  - Windows
+                    ```sh
+                    name_env\Scripts\activate.bat
+                    ```
+                  - Linux
+                    ```sh
+                    source name_env/bin/activate
+                    ```
 4. Installar todas las dependencias del proyecto.
     ```sh
     pip install -r requirements.txt
