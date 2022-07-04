@@ -1,4 +1,4 @@
-# Exámen mercado libre
+# Test REST API
 Magneto quiere reclutar la mayor cantidad de mutantes para poder luchar contra los X-Mens.
 Me ha contratado para que desarrolle un proyecto que detecte si un humano es mutante basándose en su secuencia de ADN.
 Para eso me ha pedido crear un programa con un método o función con la siguiente firma:
